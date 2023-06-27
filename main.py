@@ -76,9 +76,11 @@ def enter_number(input_prompt):
         except ValueError:
             print("Please enter a number.")
             continue
-        if number < 0:
+        if number < 0:  # pylint: disable=R1724
             print("Please enter a positive number.")
             continue
+        else:  # pylint: disable=R1724
+            break
     return number
 
 
